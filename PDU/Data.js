@@ -152,7 +152,7 @@ Data.prototype._checkData = function()
         // get byte
         var byte = Helper.order(this._data.substr(i, 1));
         
-        if(byte > 0xC0){
+        if(byte > 127){
             this._isUnicode = true;
         }
         
