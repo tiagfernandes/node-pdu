@@ -1,4 +1,4 @@
-var pdu = require('node-pdu');
+var pdu = require('./index');
 var Helper = pdu.getModule('PDU/Helper');
 
 var testNum;

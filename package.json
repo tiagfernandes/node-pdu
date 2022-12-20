@@ -1,17 +1,17 @@
 {
-  "name": "node-pdu",
-  "version": "1.0.15",
+  "name": "@tiagfernandes/node-pdu",
+  "version": "1.0.16",
   "description": "Creates and parses a SMS PDU strings",
   "main": "index.js",
   "dependencies": {
-	  "sprintf": "~0.1.5"
+    "sprintf": "~0.1.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackkum/node-pdu.git"
+    "url": "https://github.com/tiagfernandes/node-pdu"
   },
   "keywords": [
     "pdu",

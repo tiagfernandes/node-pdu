@@ -209,27 +209,29 @@ Data.prototype._prepareParts = function()
             tmp;
         
         switch(self.getPdu().getDcs().getTextAlphabet()){
-            
             case DCS.ALPHABET_DEFAULT:
                 PDU.debug("Helper.encode7Bit(text)");
                 tmp = Helper.encode7Bit(text);
+                
+                size = (parts.length > 1) ? tmp[0] + 1 : tmp[0];
                 break;
             
             case DCS.ALPHABET_8BIT:
                 PDU.debug("Helper.encode8Bit(text)");
                 tmp = Helper.encode8Bit(text);
+                size = tmp[0];
                 break;
             
             case DCS.ALPHABET_UCS2:
                 PDU.debug("Helper.encode16Bit(text)");
                 tmp = Helper.encode16Bit(text);
+                size = tmp[0];
                 break;
             
             default:
-                throw new Eerror("Unknown alphabet");
+                throw new Error("Unknown alphabet");
         }
         
-        size = tmp[0];
         part = tmp[1];
         
         if(header){
